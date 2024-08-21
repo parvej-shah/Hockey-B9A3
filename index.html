@@ -6,20 +6,539 @@
     <title>Hockey</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
                 clifford: '#da373d',
+                'primary-bg': '#FF4240',
+                'text-nav': '#424247',
+                'primary-title': '#131318',
+                'primary-text': 'rgba(19, 19, 24, 0.6)',
               }
             }
           }
         }
     </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+        .font-manrope {
+            font-family: "Manrope", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
 </head>
-<body>
-    <h2 class="text-4xl">hello Tailwind</h2>
+<body class="font-manrope">
+    <header class="container px-2 mx-auto">
+        <!-- navbar -->
+        <div class="navbar mb-12">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class=" lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a class="hover:font-bold hover:text-primary-bg text-text-nav">Home</a></li>
+                <li><a class="hover:font-bold hover:text-primary-bg text-text-nav">About</a></li>
+                <li><a class="hover:font-bold hover:text-primary-bg text-text-nav">Pages</a></li>
+                <li><a class="hover:font-bold hover:text-primary-bg text-text-nav">Blog</a></li>
+                <li><a class="hover:font-bold hover:text-primary-bg text-text-nav">Contact</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-2xl lg:text-4xl font-black text-primary-title">Hockey<span class="text-primary-bg">'</span>s</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a class="hover:font-bold hover:text-primary-bg text-text-nav">Home</a></li>
+                <li><a class="hover:font-bold hover:text-primary-bg text-text-nav">About</a></li>
+                <li><a class="hover:font-bold hover:text-primary-bg text-text-nav">Pages</a></li>
+                <li><a class="hover:font-bold hover:text-primary-bg text-text-nav">Blog</a></li>
+                <li><a class="hover:font-bold hover:text-primary-bg text-text-nav">Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end gap-6"> 
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hidden lg:flex text-text-nav">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+              <a class="btn hover:text-primary-bg bg-primary-bg text-xl font-bold text-white">Get Ticket</a>
+            </div>
+          </div>
+        <!-- Hero -->
+        <div class="carousel w-full">
+            <!-- card -->
+            <div id="slide1" class="carousel-item relative w-full lg:h-[550px] h-[200px]">
+              <img
+                src="./Images/1.png"
+                class="w-full" />
+                <!-- content -->
+                <div class="bg-primary-title rounded-2xl w-full lg:w-[566px] absolute hidden lg:block p-8 space-y-4 bottom-8 right-8">
+                    <h2 class="font-black text-2xl text-white">Meet all the heroes from the field</h2>
+                    <p class="font-medium text-gray-300">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+                </div>
+
+                <!-- navigation -->
+              <div class="absolute transform left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-5 bottom-5 flex gap-3">
+                <a href="#slide4" class="bg-primary-title flex justify-center items-center rounded-full text-white w-10 h-10">❮</a>
+                <a href="#slide2" class="bg-primary-title flex justify-center items-center rounded-full text-white w-10 h-10">❯</a>
+              </div>
+            </div>
+            <!-- card -->
+            <div id="slide2" class="carousel-item relative w-full lg:h-[550px] h-[200px]">
+              <img
+                src="./Images/2.png"
+                class="w-full" />
+                <!-- content -->
+                <div class="bg-primary-title rounded-2xl w-full lg:w-[566px] absolute hidden lg:block p-8 space-y-4 bottom-8 right-8">
+                    <h2 class="font-black text-2xl text-white">Meet all the heroes from the field</h2>
+                    <p class="font-medium text-gray-300">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+                </div>
+
+                <!-- navigation -->
+              <div class="absolute transform left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-5 bottom-5 flex gap-3">
+                <a href="#slide1" class="bg-primary-title flex justify-center items-center rounded-full text-white w-10 h-10">❮</a>
+                <a href="#slide3" class="bg-primary-title flex justify-center items-center rounded-full text-white w-10 h-10">❯</a>
+              </div>
+            </div>
+            <!-- card 3-->
+            <div id="slide3" class="carousel-item relative w-full lg:h-[550px] h-[200px]">
+              <img
+                src="./Images/3.png"
+                class="w-full" />
+                <!-- content -->
+                <div class="bg-primary-title rounded-2xl w-full lg:w-[566px] absolute hidden lg:block p-8 space-y-4 bottom-8 right-8">
+                    <h2 class="font-black text-2xl text-white">Meet all the heroes from the field</h2>
+                    <p class="font-medium text-gray-300">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+                </div>
+
+                <!-- navigation -->
+              <div class="absolute transform left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-5 bottom-5 flex gap-3">
+                <a href="#slide2" class="bg-primary-title flex justify-center items-center rounded-full text-white w-10 h-10">❮</a>
+                <a href="#slide4" class="bg-primary-title flex justify-center items-center rounded-full text-white w-10 h-10">❯</a>
+              </div>
+            </div>
+            <!-- card 4-->
+            <div id="slide4" class="carousel-item relative w-full lg:h-[550px] h-[200px]">
+              <img
+                src="./Images/4.png"
+                class="w-full" />
+                <!-- content -->
+                <div class="bg-primary-title rounded-2xl w-full lg:w-[566px] absolute hidden lg:block p-8 space-y-4 bottom-8 right-8">
+                    <h2 class="font-black text-2xl text-white">Meet all the heroes from the field</h2>
+                    <p class="font-medium text-gray-300">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+                </div>
+
+                <!-- navigation -->
+              <div class="absolute transform left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-5 bottom-5 flex gap-3">
+                <a href="#slide3" class="bg-primary-title flex justify-center items-center rounded-full text-white w-10 h-10">❮</a>
+                <a href="#slide1" class="bg-primary-title flex justify-center items-center rounded-full text-white w-10 h-10">❯</a>
+              </div>
+            </div>
+          </div>
+          <!-- mobile content -->
+          <div class="bg-primary-title rounded-2xl w-full lg:hidden p-4 space-y-2 mt-4">
+            <h2 class="font-black text-2xl text-white">Meet all the heroes from the field</h2>
+            <p class="font-medium text-gray-300">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+        </div>
+    </header>
+
+    <main class="container px-2 mx-auto">
+        <!-- Progress Section -->
+        <section class="my-20 lg:my-24">
+            <!-- title box -->
+             <div class="mb-12 py-8 w-full border-y border-dashed">
+             <div class="max-w-lg text-center mx-auto">
+                <h2 class="font-black text-primary-title text-4xl">Professional Hockeys Club</h2>
+                <p class="font-medium text-primary-text mt-6">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+             </div>
+            </div>
+            <!-- main -->
+             <div class="grid grid-cols-1 lg:grid-cols-4">
+                <!-- card -->
+                <div class="card">
+                    <figure class="pt-10">
+                        <div class="radial-progress text-primary-bg" style="--value:87; --size:8rem;" role="progressbar"><span class="font-black text-3xl text-primary-title">87%</span> </div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-semibold text-xl text-primary-title">Prayer Facility</h2>
+                      <p class="text-primary-text">Amet consectetur. Condimentum dignissim adipiscing .</p>
+                    </div>
+                  </div>
+                <!-- card -->
+                <div class="card">
+                    <figure class="pt-10">
+                        <div class="radial-progress text-[#49D293]" style="--value:95; --size:8rem;" role="progressbar"><span class="font-black text-3xl text-primary-title">95%</span> </div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-semibold text-xl text-primary-title">Experienced Coach</h2>
+                      <p class="text-primary-text">Amet consectetur. Condimentum dignissim adipiscing .</p>
+                    </div>
+                  </div>
+                <!-- card -->
+                <div class="card">
+                    <figure class="pt-10">
+                        <div class="radial-progress text-[#FFB546]" style="--value:90; --size:8rem;" role="progressbar"><span class="font-black text-3xl text-primary-title">90%</span> </div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-semibold text-xl text-primary-title">Senior Player</h2>
+                      <p class="text-primary-text">Amet consectetur. Condimentum dignissim adipiscing .</p>
+                    </div>
+                  </div>
+                <!-- card -->
+                <div class="card">
+                    <figure class="pt-10">
+                        <div class="radial-progress text-[#4C8DF1]" style="--value:80; --size:8rem;" role="progressbar"><span class="font-black text-3xl text-primary-title">80%</span> </div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-semibold text-xl text-primary-title">Training Ground</h2>
+                      <p class="text-primary-text">Amet consectetur. Condimentum dignissim adipiscing .</p>
+                    </div>
+                  </div>
+             </div>
+        </section>
+        <!-- Program Section -->
+        <section>
+            <!-- title box -->
+            <div class="mb-12 py-8 w-full border-y border-dashed">
+            <div class="max-w-lg text-center mx-auto">
+            <h2 class="font-black text-primary-title text-4xl">Program Sections</h2>
+            <p class="font-medium text-primary-text mt-6">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+            </div>
+            </div>
+            <!-- cards -->
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- card -->
+                <div class="relative h-60 lg:h-[338px]">
+                      <img
+                        src="./Images/2.png"
+                        alt="Shoes" class="brightness-50 h-full w-full"/>
+                    <div class="absolute left-7 lg:left-12 lg:bottom-12 bottom-7 w-[277px] space-y-4">
+                      <h2 class="card-title font-black lg:text-3xl text-xl text-white">Junior Program</h2>
+                      <p class="text-white lg:text-base text-sm">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. </p>
+                      <div class="card-actions justify-start">
+                        <button class="btn hover:text-primary-bg bg-primary-bg text-xl font-bold text-white border-none">Register Now</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- card -->
+                <div class="relative h-60 lg:h-[338px]">
+                      <img
+                        src="./Images/3.png"
+                        alt="Shoes" class="brightness-50 h-full w-full"/>
+                    <div class="absolute left-7 lg:left-12 lg:bottom-12 bottom-7 w-72 space-y-4">
+                      <h2 class="card-title font-black lg:text-3xl text-xl text-white">Teenager Program</h2>
+                      <p class="text-white lg:text-base text-sm">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. </p>
+                      <div class="card-actions justify-start">
+                        <button class="btn hover:text-primary-bg bg-primary-bg text-xl font-bold text-white border-none">Register Now</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- card -->
+               <div class="relative h-60 lg:h-[450px] lg:col-span-2">
+                      <img
+                        src="./Images/4.png"
+                        alt="Shoes" class="brightness-50 h-full w-full"/>
+                    <div class="absolute  left-7 lg:left-12 lg:bottom-12 bottom-7 w-72 lg:w-80 space-y-4">
+                      <h2 class="card-title font-black text-xl lg:text-3xl text-white">Professional Program</h2>
+                      <p class="text-white text-sm lg:text-base">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. </p>
+                      <div class="card-actions justify-start">
+                        <button class="btn hover:text-primary-bg bg-primary-bg text-xl font-bold text-white border-none">Register Now</button>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+        </section>
+        <!-- product section -->
+        <section class="my-20 lg:my-24">
+            <!-- title box -->
+            <div class="mb-12 py-8 w-full border-y border-dashed">
+                <div class="max-w-lg text-center mx-auto">
+                   <h2 class="font-black text-primary-title text-4xl">Our New Products</h2>
+                   <p class="font-medium text-primary-text mt-6">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+                </div>
+            </div>
+            <!-- main content -->
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- card -->
+                <div class="lg:flex items-center gap-6 rounded-2xl border p-6">
+                    <figure>
+                      <img
+                        src="./Images/5.png"
+                        alt="Movie" class="w-full mb-6 lg:mb-0" />
+                    </figure>
+                    <div class="space-y-3">
+                        <div class="flex gap-4 items-center">
+                            <div class="flex gap-2 items-center" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-yellow-500">
+                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">5.0</p>
+                              </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                  </svg>           
+                                  <p class="text-base text-primary-text font-medium">20</p>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                  </svg>
+                                  <p class="text-base text-primary-text font-medium">200</p>
+                            </div>
+                        </div>
+                      <h2 class="font-black text-primary-title text-xl">World Cup Flags Football</h2>
+                      <p class="font-medium text-primary-text ">Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                      <div class="lg:flex gap-5">
+                        <h4 class="text-primary-bg font-black text-lg">Price - $22.00</h4>
+                          <div class="flex gap-2 items-center mt-2 lg:mt-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">Delivery Fee : Free</p>
+                        </div>                          
+                      </div>
+                    </div>
+                  </div>
+                <!-- card -->
+                <div class="lg:flex items-center gap-6 rounded-2xl border p-6">
+                    <figure>
+                      <img
+                        src="./Images/6.png"
+                        alt="Movie" class="w-full mb-6 lg:mb-0" />
+                    </figure>
+                    <div class="space-y-3">
+                        <div class="flex gap-4 items-center">
+                            <div class="flex gap-2 items-center" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-yellow-500">
+                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">5.0</p>
+                              </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                  </svg>           
+                                  <p class="text-base text-primary-text font-medium">20</p>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                  </svg>
+                                  <p class="text-base text-primary-text font-medium">200</p>
+                            </div>
+                        </div>
+                      <h2 class="font-black text-primary-title text-xl">World Cup Flags Football</h2>
+                      <p class="font-medium text-primary-text ">Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                      <div class="lg:flex gap-5">
+                        <h4 class="text-primary-bg font-black text-lg">Price - $22.00</h4>
+                          <div class="flex gap-2 items-center mt-2 lg:mt-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">Delivery Fee : Free</p>
+                        </div>                          
+                      </div>
+                    </div>
+                  </div>
+                <!-- card -->
+                <div class="lg:flex items-center gap-6 rounded-2xl border p-6">
+                    <figure>
+                      <img
+                        src="./Images/7.png"
+                        alt="Movie" class="w-full mb-6 lg:mb-0" />
+                    </figure>
+                    <div class="space-y-3">
+                        <div class="flex gap-4 items-center">
+                            <div class="flex gap-2 items-center" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-yellow-500">
+                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">5.0</p>
+                              </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                  </svg>           
+                                  <p class="text-base text-primary-text font-medium">20</p>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                  </svg>
+                                  <p class="text-base text-primary-text font-medium">200</p>
+                            </div>
+                        </div>
+                      <h2 class="font-black text-primary-title text-xl">World Cup Flags Football</h2>
+                      <p class="font-medium text-primary-text ">Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                      <div class="lg:flex gap-5">
+                        <h4 class="text-primary-bg font-black text-lg">Price - $22.00</h4>
+                          <div class="flex gap-2 items-center mt-2 lg:mt-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">Delivery Fee : Free</p>
+                        </div>                          
+                      </div>
+                    </div>
+                  </div>
+                <!-- card -->
+                <div class="lg:flex items-center gap-6 rounded-2xl border p-6">
+                    <figure>
+                      <img
+                        src="./Images/8.png"
+                        alt="Movie" class="w-full mb-6 lg:mb-0" />
+                    </figure>
+                    <div class="space-y-3">
+                        <div class="flex gap-4 items-center">
+                            <div class="flex gap-2 items-center" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-yellow-500">
+                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">5.0</p>
+                              </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                  </svg>           
+                                  <p class="text-base text-primary-text font-medium">20</p>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                  </svg>
+                                  <p class="text-base text-primary-text font-medium">200</p>
+                            </div>
+                        </div>
+                      <h2 class="font-black text-primary-title text-xl">World Cup Flags Football</h2>
+                      <p class="font-medium text-primary-text ">Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                      <div class="lg:flex gap-5">
+                        <h4 class="text-primary-bg font-black text-lg">Price - $22.00</h4>
+                          <div class="flex gap-2 items-center mt-2 lg:mt-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">Delivery Fee : Free</p>
+                        </div>                          
+                      </div>
+                    </div>
+                  </div>
+                <!-- card -->
+                <div class="lg:flex items-center gap-6 rounded-2xl border p-6">
+                    <figure>
+                      <img
+                        src="./Images/9.png"
+                        alt="Movie" class="w-full mb-6 lg:mb-0" />
+                    </figure>
+                    <div class="space-y-3">
+                        <div class="flex gap-4 items-center">
+                            <div class="flex gap-2 items-center" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-yellow-500">
+                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">5.0</p>
+                              </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                  </svg>           
+                                  <p class="text-base text-primary-text font-medium">20</p>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                  </svg>
+                                  <p class="text-base text-primary-text font-medium">200</p>
+                            </div>
+                        </div>
+                      <h2 class="font-black text-primary-title text-xl">World Cup Flags Football</h2>
+                      <p class="font-medium text-primary-text ">Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                      <div class="lg:flex gap-5">
+                        <h4 class="text-primary-bg font-black text-lg">Price - $22.00</h4>
+                          <div class="flex gap-2 items-center mt-2 lg:mt-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">Delivery Fee : Free</p>
+                        </div>                          
+                      </div>
+                    </div>
+                  </div>
+                <!-- card -->
+                <div class="lg:flex items-center gap-6 rounded-2xl border p-6">
+                    <figure>
+                      <img
+                        src="./Images/10.png"
+                        alt="Movie" class="w-full mb-6 lg:mb-0" />
+                    </figure>
+                    <div class="space-y-3">
+                        <div class="flex gap-4 items-center">
+                            <div class="flex gap-2 items-center" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-yellow-500">
+                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">5.0</p>
+                              </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                  </svg>           
+                                  <p class="text-base text-primary-text font-medium">20</p>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                  </svg>
+                                  <p class="text-base text-primary-text font-medium">200</p>
+                            </div>
+                        </div>
+                      <h2 class="font-black text-primary-title text-xl">World Cup Flags Football</h2>
+                      <p class="font-medium text-primary-text ">Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                      <div class="lg:flex gap-5">
+                        <h4 class="text-primary-bg font-black text-lg">Price - $22.00</h4>
+                          <div class="flex gap-2 items-center mt-2 lg:mt-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-text">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                              </svg>
+                              <p class="text-base text-primary-text font-medium">Delivery Fee : Free</p>
+                        </div>                          
+                      </div>
+                    </div>
+                  </div>
+             </div>
+        </section>
+        
+    </main>
+    <!-- button -->
+    <!-- <a class="btn hover:text-primary-bg bg-primary-bg text-xl font-bold text-white">Get Ticket</a> -->
+    
+    <!-- title box -->
+    <!-- <div class="mb-12 py-8 w-full border-y border-dashed">
+        <div class="max-w-lg text-center mx-auto">
+           <h2 class="font-black text-primary-title text-4xl">Professional Hockeys Club</h2>
+           <p class="font-medium text-primary-text mt-6">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+        </div>
+    </div> --> 
 </body>
 </html>
